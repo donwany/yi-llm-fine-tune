@@ -13,6 +13,13 @@ You can also prepare your customized dataset in the following `.jsonl` format:
 
 And then mount them in the container to replace the default ones:
 
+### Install Docker
+```bash
+
+
+```
+
+
 ```bash
 docker run -it \
     -v /path/to/save/finetuned/model/:/finetuned-model \
