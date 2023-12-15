@@ -15,16 +15,14 @@ And then mount them in the container to replace the default ones:
 
 ### Install Docker
 ```bash
-
-
+she setup.sh
 ```
-
 
 ```bash
 docker run -it \
-    -v /path/to/save/finetuned/model/:/finetuned-model \
-    -v /path/to/train.jsonl:/yi/finetune/data/train.jsonl \
-    -v /path/to/eval.jsonl:/yi/finetune/data/eval.jsonl \
+    -v ./yi_example_dataset/save/finetuned/model/:/finetuned-model \
+    -v ./yi_example_dataset/data/train.jsonl:/yi/finetune/data/train.jsonl \
+    -v ./yi_example_dataset/data/eval.jsonl:/yi/finetune/data/eval.jsonl \
     ghcr.io/01-ai/yi:latest \
     bash finetune/scripts/run_sft_Yi_6b.sh
 ```
